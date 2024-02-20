@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog Lists</title>
+    <link rel="stylesheet" href="/styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+
+    <h1>My Blog Lists</h1>
+
+    <!-- Display the list of blogs -->
+    <ul>
+        <% blogs.forEach(blog => { %>
+            <li>
+                <h2><%= blog.blogTitle %></h2>
+                <p><%= blog.blogText %></p>
+            </li>
+        <% }) %>
+    </ul>
+
+    <!-- Link to add a new blog -->
+    <a href="/blog/add">Add New Blog</a>
+
+    <!-- "Go Back" button -->
+    <!-- Set the href attribute to the URL of your home page -->
+    <a href="/" class="go-back-button">Go Back</a>
+</body>
+</html>
